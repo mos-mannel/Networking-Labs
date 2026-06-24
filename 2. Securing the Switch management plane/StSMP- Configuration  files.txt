@@ -1,0 +1,30 @@
+
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname Dept-Switch
+!
+enable secret 5 $1$mERr$njh1MxQ7R6IaMu65nQd.E.
+!
+!
+interface Vlan1
+ ip address 192.168.1.100 255.255.255.0
+!
+!
+
+line con 0
+ password 7 0812494D1C0B00341D051F0B262E757A
+ login
+!
+line vty 0 4
+ password 7 0812494D1C0B0025170603102F7A76
+ login
+line vty 5 15
+ password 7 0812494D1C0B0025170603102F7A76
+ login
+!
+!
+end
+
